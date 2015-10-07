@@ -16,9 +16,7 @@ var Queue = function(){
       var temp = storage[0];
       delete storage[0];
       counter--;
-      
-        storage[0] = storage[1];
-      
+      storage[0] = storage[1];
       return temp;
     } 
   };
