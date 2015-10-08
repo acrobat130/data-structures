@@ -70,7 +70,7 @@ define(['../../lib/chai/chai.js', '../../lib/underscore/underscore.js'], functio
       var might = function(behavior, setting){
         return 'does ' + (setting ? '' : 'not ') + behavior;
       };
-
+      
       var assuming = function(condition){
         return {expect: function(){
           var expectActual = expect.apply(null, arguments);
