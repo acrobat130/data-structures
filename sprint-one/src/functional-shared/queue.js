@@ -10,12 +10,18 @@ var Queue = function(){
 };
 
 var queueMethods = {};
-  
-queueMethods.enqueue = function(){};
+  var storage = {};
+  var counter = 0;
+  queueMethods.enqueue = function(value){
+    storage[counter] = value;
+    counter++;
+  };
 
-queueMethods.dequeue = function(){};
+  queueMethods.dequeue = function(){};
 
-queueMethods.size = function(){};
+  queueMethods.size = function(){
+    return counter;
+  };
 
   
 
