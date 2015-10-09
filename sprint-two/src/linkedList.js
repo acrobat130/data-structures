@@ -21,13 +21,19 @@ var LinkedList = function(){
   };
 
   list.removeHead = function(){
- 
-    list.head = list.head.next;
+  var result = list.head.value;
+   list.head = list.tail;
+   return result;
     // delete list.head.value
     // return list.head;
   };
 
   list.contains = function(target){
+    if(list.tail.value === target || list.head.value === target){
+      return true;
+    }else{
+      return false;
+    }
   };
 
   return list;
