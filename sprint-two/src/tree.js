@@ -38,7 +38,7 @@ treeMethods.contains = function(target){
       //console.log("children obj:",this.children[i],"children value:", this.children);
       if (this.children[i].contains(target)) {
         isFound = true;
-        break;
+        return isFound;
       }
     }
   }
