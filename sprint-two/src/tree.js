@@ -27,40 +27,21 @@ treeMethods.addChild = function(value){
 // this function checks tree for matching target value
 treeMethods.contains = function(target){
   // base case - return true if target = value
+  var isFound = false; // flag variable, should be verb
   if(target === this.value){
-    console.log("current value:", this.value);
-    return true;
+    isFound = true;
+    return isFound;
   }
-  // // recursive case
-  if (this.children.length > 0){
+  // recursive case
+  // if (this.children.length > 0){
     // run contains function on all objects in children array
     for (var i = 0; i < this.children.length; i++) {
       console.log("children obj:",this.children[i],"children value:", this.children);
-      var result = this.children[i].contains(target);
-      if (result === true) {
-        return result;
-      } 
+      this.children[i].contains(target); 
     }  
-    // if (result === true) {
-    //   return result;
-    // } else {
-    //   result = false;
-    //   return result;
-    // }
-  } //else { // check undefined
-     // return false;
-    //}
-
-// // for loop alternative to pass test
-//   if (this.children === true) {
-//     for (var i = 0; i < this.children.length; i++) {
-//       if (target === this.value) {
-//         return true;
-//       } else {
-//         return false;
-//       }
-//     }
-//   }
+  // } 
+  return isFound;
+ 
 
 };
 
