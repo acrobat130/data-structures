@@ -35,8 +35,49 @@ binaryTreeMethods.insert = function(value){
 
   // console.log(this);
 };
-binaryTreeMethods.contains = function(value){};
-binaryTreeMethods.depthFirstLog = function(callback){};
+binaryTreeMethods.contains = function(value){
+    var result = false;
+    var currentNode = this;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else {
+        result = true;
+        return result;
+      }
+    } 
+    return result;
+  // var result = false;
+  // var doesNodeContain = function(node) {
+  //   if (value === node.value) {
+  //     result = true;
+  //     return result;
+  //   } else if (node.left !== null){
+  //     doesNodeContain(node.left);
+  //     result = true;
+  //     return result;
+  //   } else if (node.right !== null) {
+  //     doesNodeContain(node.right);
+  //     result = true;
+  //     return result;
+  //   }
+  // }
+  // doesNodeContain(this);
+  // return result;
+};
+binaryTreeMethods.depthFirstLog = function(callback){
+   var applyCallback = function(node){
+    callback(node.value);
+    if (node.left) {
+      applyCallback(node.left);
+    } else if (node.right) {
+      applyCallback(node.right);
+    }    
+   }
+   applyCallback(this);
+};
 
 
 /*
