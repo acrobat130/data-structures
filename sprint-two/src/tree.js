@@ -30,18 +30,21 @@ treeMethods.contains = function(target){
   var isFound = false; // flag variable, should be verb
   if(target === this.value){
     isFound = true;
-    return isFound;
-  }
+  } else {
   // recursive case
   // if (this.children.length > 0){
     // run contains function on all objects in children array
     for (var i = 0; i < this.children.length; i++) {
-      console.log("children obj:",this.children[i],"children value:", this.children);
-      this.children[i].contains(target); 
-    }  
-  // } 
+      //console.log("children obj:",this.children[i],"children value:", this.children);
+      if (this.children[i].contains(target)) {
+        isFound = true;
+        break;
+      }
+    }
+  }
+  // }
   return isFound;
- 
+
 
 };
 
