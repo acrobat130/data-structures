@@ -2,8 +2,8 @@
 This is a project I completed as a student at [Telegraph Academy](http://telegraphacademy.com). This project was worked on with a pair.
 
 # How to use this repository
-
-To view this repository, open either of the `SpecRunner.html` files in your Chrome browser (there is one inside each of the sprint-one  and sprint-two folders).
+1. Fork and clone this repository.
+2. To view this repository, open either of the `SpecRunner.html` files in your Chrome browser (there is one inside each of the sprint-one  and sprint-two folders).
 
 # About this repository
 In part-one, we re-implemented the stack and queue data structures from scratch in each of the following instantiation patterns:
